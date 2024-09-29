@@ -1,18 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomeScreen from './screens/HomeScreen';
-import TestScreen from './screens/TestScreen';
-import ResultScreen from './screens/ResultScreen';
-import Diagnosis from './screens/DiagnosisScreen';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Diagnosis from "./screens/DiagnosisScreen"; // Load DiagnosisScreen on start
+import ResultScreen from "./screens/ResultScreen";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        {/* <Route path="/test" element={<TestScreen />} /> */}
+        <Route path="/" element={<Diagnosis />} />{" "}
+        {/* Set Diagnosis as default */}
         <Route path="/result" element={<ResultScreen />} />
-        <Route path="/diagnosis" element={<Diagnosis />} />
       </Routes>
     </Router>
   );
